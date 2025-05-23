@@ -4,7 +4,7 @@ import { Card } from "@/components/ui/card";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { CalendarView } from "../../types/calender";
+import { CalendarView } from "@/types/calendar";
 
 interface SidebarProps {
 	storeName: string;

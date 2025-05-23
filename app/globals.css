@@ -69,3 +69,30 @@
 	gap: 1px;
 	background-color: #e5e7eb;
 }
+/* 既存のスタイル... */
+
+/* エクスポート用のスタイル */
+@media print {
+	.export-only {
+		display: block !important;
+	}
+}
+
+/* html2canvasでキャプチャする際の表示制御 */
+#calendar-export-container[data-exporting="true"] .export-only {
+	display: block !important;
+}
+
+/* エクスポート時の見た目調整 */
+#calendar-export-container {
+	position: relative;
+}
+
+/* Instagram用の正方形レイアウト */
+#calendar-export-container[data-instagram="true"] {
+	aspect-ratio: 1 / 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}

@@ -1,7 +1,7 @@
 "use client";
 
 import { cn } from "@/lib/utils";
-import { DayInfo } from "../../types/calender";
+import { DayInfo } from "@/types/calendar";
 import { isDateToday, isSameMonthAsDate } from "@/utils/date";
 import { Check, X, AlertCircle } from "lucide-react";
 

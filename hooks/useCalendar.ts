@@ -1,5 +1,5 @@
 import { useState, useCallback } from "react";
-import { BusinessStatus, DayInfo } from "../types/calender";
+import { BusinessStatus, DayInfo } from "@/types/calendar";
 import { startOfMonth } from "date-fns";
 
 export const useCalendar = (initialDate: Date = new Date()) => {
@@ -17,6 +17,10 @@ export const useCalendar = (initialDate: Date = new Date()) => {
 				dayInfoMap.get(key) || {
 					date,
 					status: "open",
+					hours: {
+						openTime: "09:00",
+						closeTime: "18:00",
+					},
 				}
 			);
 		},

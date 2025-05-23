@@ -3,8 +3,10 @@
 import { useState } from "react";
 import { Header } from "@/components/layout/Header";
 import { Sidebar } from "@/components/layout/Sidebar";
-import { MonthCalendar } from "@/components/calender/MonthCalender";
-import { CalendarView } from "@/types/calender";
+import { MonthCalendar } from "@/components/calendar/MonthCalendar";
+import { WeekCalendar } from "@/components/calendar/WeekCalendar";
+import { ExportWrapper } from "@/components/calendar/ExportWrapper";
+import { CalendarView } from "@/types/calendar";
 
 export default function Home() {
 	const [storeName, setStoreName] = useState("サンプル店舗");
@@ -33,13 +35,13 @@ export default function Home() {
 							className="rounded-lg bg-white p-8 shadow-sm"
 							id="calendar-container"
 						>
-							{view === "month" ? (
-								<MonthCalendar storeName={storeName} />
-							) : (
-								<div className="flex h-96 items-center justify-center rounded-lg border-2 border-dashed border-gray-300 bg-gray-50">
-									<p className="text-gray-500">週間カレンダーは次に実装します</p>
-								</div>
-							)}
+							<ExportWrapper storeName={storeName}>
+								{view === "month" ? (
+									<MonthCalendar storeName={storeName} />
+								) : (
+									<WeekCalendar storeName={storeName} />
+								)}
+							</ExportWrapper>
 						</div>
 					</main>
 				</div>

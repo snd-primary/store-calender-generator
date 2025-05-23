@@ -2,10 +2,10 @@
 
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { useCalendar } from "../../hooks/useCalender";
+import { useCalendar } from "@/hooks/useCalendar";
 import { getDaysInMonth, formatDate } from "@/utils/date";
 import { cn } from "@/lib/utils";
-import { CalendarCell } from "./CalenderCell";
+import { CalendarCell } from "./CalendarCell";
 
 interface MonthCalendarProps {
 	storeName: string;
